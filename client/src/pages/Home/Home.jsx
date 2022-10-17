@@ -1,9 +1,17 @@
 import React from 'react'
+import '../../App.css'
+import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
+import RightSidebar from '../../components/RightSidebar/RightSidebar'
+import HomeMainbar from '../../components/HomeMainbar/HomeMainbar'
 
 const Home = () => {
   return (
-      <div>
-          <h1 style={{textAlign:'center', marginTop:'100px'}}>Home</h1>
+    <div className='home-container-1'>
+      <LeftSidebar />
+      <div className="home-container-2">
+        <HomeMainbar />
+        <RightSidebar />
+      </div>
     </div>
   )
 }

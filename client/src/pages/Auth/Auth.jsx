@@ -55,7 +55,7 @@ const Auth = () => {
           }          
         </form>
         <p>
-          {isSignup ? 'Already have an account' : "Don't have an account ?"}
+          {isSignup ? 'Already have an account ?' : "Don't have an account ?"}
           <button type='button' className='handle-switch-btn' onClick={handleSwitch}>{ isSignup ? 'Log in' : 'Sign up'}</button>
         </p>
       </div>
