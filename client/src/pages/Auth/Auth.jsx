@@ -38,7 +38,7 @@ const Auth = () => {
           {
             isSignup &&
             <label htmlFor='check'>
-                <input type="checkbox" id="check" />
+                <input style={{height:'15px',marginRight:'10px',marginLeft:'-10px'}} type="checkbox" id="check" />
                 <p style={{fontSize:'13px'}}>
                   Opt-in to receive occasional<br />produxt updates, user research invitations,<br />company announcements, and digests.
                 </p>
