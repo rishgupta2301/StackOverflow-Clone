@@ -1,4 +1,4 @@
-nav{
+.main-nav{
     min-height: 50px;
     width: 100%;
     margin: 0% auto;
@@ -28,10 +28,10 @@ nav{
 
 .nav-item{
     margin: 0px 3px;
-    text-decoration: none;
     font-size: small;
     font-weight: 500;
-    color: rgb(69, 69,69);
+    text-decoration: none;
+    color: rgb(69, 69, 69);
     transition: 0.2s;
 }
 
@@ -60,7 +60,7 @@ nav{
     border-radius: 3px;
 }
 
-.navbar form .search-icon{
+.navbar form .search-icon {
     position: absolute;
     left: 25px;
     top: 8px;
