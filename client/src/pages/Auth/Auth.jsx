@@ -11,7 +11,7 @@ const Auth = () => {
   }
 
   return (
-    <section  className='auth-section'>
+    <section style={{marginTop:'40px'}} className='auth-section'>
       {isSignup && <AboutAuth />}
       <div className="auth-container-2">
         {!isSignup && <img src={icon} alt='stackOverflow-logo' className='login-logo' />}
