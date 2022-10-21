@@ -23,10 +23,15 @@ const QuestionsDetails = () => {
         userId: 1,
         askedOn: "jan 1",
         answer: [{
-            answerBody: "Answer",
+            answerBody: "Answer1",
             userAnswered: 'kumar',
             answeredOn: "jan 2",
             userId: 2,
+        },{
+            answerBody: "Answer2",
+            userAnswered: 'Sanu',
+            answeredOn: "jan 3",
+            userId: 4,
         }]
     },{ 
         _id: '2',
