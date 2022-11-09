@@ -4,7 +4,7 @@
     transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
     transform: translateZ(0);
     box-sizing: border-box;
-    font-size: 13px;
+    font-size: 12.5px;
 }
 
 .side-nav{

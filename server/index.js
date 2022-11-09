@@ -4,6 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv';
 
 import userRoutes from './routes/users.js'
+import questionRoutes from './routes/Questions.js'
 
 const app = express();
 app.use(express.json({ limit: '30mb', extended: true }))
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/user', userRoutes)
+app.use('/questions', questionRoutes)
 
 const PORT = process.env.PORT || 5000;
 const CONNECTION_URL = "mongodb+srv://admin:admin@stack-overflow-clone.atvfpo8.mongodb.net/?retryWrites=true&w=majority"
