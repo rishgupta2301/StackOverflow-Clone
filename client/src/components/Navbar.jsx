@@ -32,7 +32,7 @@ const Navbar = () => {
               {User === null ? 
                   <Link to='/Auth' className='nav-item nav-links '>Log in</Link> :  // if user is null then re-route to login page
                   <>
-                      <Link to='/User' style={{textDecoration:'none'}}><Avatar backgroundColor='#009dff' px='5px' py='11px' borderRadius='50%' color='white' >R</Avatar></Link>
+              <Link to='/User' style={{ textDecoration: 'none' }}><Avatar backgroundColor='#009dff' px='5px' py='11px' borderRadius='50%' color='white' >{ User.result.name.charAt(0).toUpperCase()}</Avatar></Link>
                       <button className='nav-item nav-links'>Log out</button>
                   </>
                }
