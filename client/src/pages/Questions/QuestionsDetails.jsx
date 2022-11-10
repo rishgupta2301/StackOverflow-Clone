@@ -10,7 +10,7 @@ import downvote from '../../assets/sort-down.svg'
 import Avatar from '../../components/Avatar/Avatar'
 import DisplayAnswer from './DisplayAnswer'
 
-import { postAnswer } from '../../actions/question'
+import { deleteQuestion, postAnswer } from '../../actions/question'
 
 
 
@@ -94,7 +94,7 @@ const QuestionsDetails = () => {
             if (Answer === '') {
                 alert('Enter an answer before submitting')
             } else {
-                dispatch(postAnswer({ id, noOfAnswers:answerLength + 1, answerBody: Answer, userAnswered: User.result.name}))
+                dispatch(postAnswer({ id, noOfAnswers:answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId:User.result._id}))
             }
         }
     }
@@ -102,7 +102,10 @@ const QuestionsDetails = () => {
         copy(url + location.pathname);
         alert('Copied URL: '+url+location.pathname);
     }
-    
+    const handleDelete = () => {
+        dispatch(deleteQuestion(id,Navigate))
+    }
+
   return (
       <div className="question-details-page">
           {
@@ -132,7 +135,11 @@ const QuestionsDetails = () => {
                                                   </div>
                                                   <div className="question-actions-user">
                                                       <button type='button' onClick={handleShare}>Share</button>
-                                                      <button type='button'>Delete</button>
+                                                      {
+                                                          User?.result?._id === question?.userId && (
+                                                              <button type='button' onClick={handleDelete}>Delete</button>
+                                                          )
+                                                      }
                                                   </div>
                                                   <div>
                                                       <p>asked {moment(question.askedOn).fromNow()} </p>

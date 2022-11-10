@@ -16,7 +16,7 @@ const AskQuestion = () => {
 const handleSubmit = (e)=>{
     e.preventDefault()
     //console.log({questionTitle,questionBody,questionTags})
-    dsipatch(askQuestion({questionTitle, questionBody, questionTags, userPosted:User.result.name,userId:User?.result._id},navigate))
+    dsipatch(askQuestion({questionTitle, questionBody, questionTags, userPosted:User.result.name,userId:User?.result?._id},navigate))
 }
 const handleEnter = (e)=>{
    if(e.key==='Enter'){
