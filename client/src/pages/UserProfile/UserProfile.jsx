@@ -28,11 +28,12 @@ const UserProfile = () => {
               <section>
                   <div className='user-details-container'>
                       <div className='user-details'>
-                          <Avatar backgroundColor='purple' color='white' fontSize='50px' px='40px' py='30px' >
+                          <div className='avatar'>
+                          <Avatar backgroundColor='purple' color='white' fontSize='50px' px='40px' py='45px' borderRadius='15px'>
                             {currentProfile?.name.charAt(0).toUpperCase()}
-                          </Avatar>
+                          </Avatar></div>
                           <div className='user-name'>
-                              <h1>{currentProfile?.name}</h1>
+                              <h1 style={{fontSize:'33px'}}>{currentProfile?.name}</h1>
                               <p><FontAwesomeIcon icon={faBirthdayCake} /> Joined {moment(currentProfile?.joinedOn).fromNow()}</p>
                           </div>
                           <div>

@@ -20,13 +20,14 @@
 .edit-profile-btn{
     padding: 8px 10px;
     border: solid 1px #7e7e7e;
-    border-radius: 2px;
+    border-radius: 7px;
     background-color: white;
     cursor: pointer;
     transition: 0.3s;
 }
 .edit-profile-btn:hover{
-    background-color: #f5f9fc;
+    background-color: #b5babe;
+    border-radius: 10px;
 }
 .edit-profile-title{
     padding: 20px 0px;
@@ -96,4 +97,8 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+.avatar{
+    box-shadow: 1px 0px 5px 5px rgba(43, 41, 43, 0.2);
+    border-radius: 20px;
 }
