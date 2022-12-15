@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: 'https://stack-overflow-prod-clone.herokuapp.com'})
+// const API = axios.create({ baseURL: 'https://stack-overflow-prod-clone.herokuapp.com'})
+// const API = axios.create({ baseURL: 'http://localhost:5000'})
+const API = axios.create({ baseURL: 'https://stackoverflow-clone-rishgupta2301.vercel.app'})
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('Profile')){
